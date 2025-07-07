@@ -1,0 +1,20 @@
+{
+  "name": "quickbite",
+  "version": "1.0.0",
+  "description": "Smart Recipe & Meal Planner - A lightweight web application for discovering and planning meals",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install-deps": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": ["recipe", "meal-planner", "cooking", "food"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
