@@ -94,10 +94,11 @@ const RecipeFilters = ({ filters, onFiltersChange, onSearch }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 border-t border-gray-200">
           {/* Max Total Time */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="maxTotalTime" className="block text-sm font-medium text-gray-700 mb-2">
               Max Total Time
             </label>
             <select
+              id="maxTotalTime"
               value={filters.maxTotalTime}
               onChange={(e) => handleFilterChange('maxTotalTime', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
@@ -112,10 +113,11 @@ const RecipeFilters = ({ filters, onFiltersChange, onSearch }) => {
 
           {/* Max Prep Time */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="maxPrepTime" className="block text-sm font-medium text-gray-700 mb-2">
               Max Prep Time
             </label>
             <select
+              id="maxPrepTime"
               value={filters.maxPrepTime}
               onChange={(e) => handleFilterChange('maxPrepTime', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
@@ -130,10 +132,11 @@ const RecipeFilters = ({ filters, onFiltersChange, onSearch }) => {
 
           {/* Diet */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="diet" className="block text-sm font-medium text-gray-700 mb-2">
               Diet
             </label>
             <select
+              id="diet"
               value={filters.diet}
               onChange={(e) => handleFilterChange('diet', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
@@ -149,10 +152,11 @@ const RecipeFilters = ({ filters, onFiltersChange, onSearch }) => {
 
           {/* Difficulty */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="difficulty" className="block text-sm font-medium text-gray-700 mb-2">
               Difficulty
             </label>
             <select
+              id="difficulty"
               value={filters.difficulty}
               onChange={(e) => handleFilterChange('difficulty', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
@@ -166,10 +170,11 @@ const RecipeFilters = ({ filters, onFiltersChange, onSearch }) => {
 
           {/* Tags */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="mealType" className="block text-sm font-medium text-gray-700 mb-2">
               Meal Type
             </label>
             <select
+              id="mealType"
               value={filters.tags}
               onChange={(e) => handleFilterChange('tags', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
