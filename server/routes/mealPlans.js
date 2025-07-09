@@ -22,23 +22,25 @@ router.post('/', (req, res) => {
   try {
     const { name, week, meals } = req.body;
 
-    if (!name || !week || !meals) {
-      return res.status(400).json({ error: 'Name, week, and meals are required' });
+    if (!name || !week) {
+      return res.status(400).json({ error: 'Name and week are required' });
     }
+
+    const defaultMeals = {
+      monday: { breakfast: null, lunch: null, dinner: null },
+      tuesday: { breakfast: null, lunch: null, dinner: null },
+      wednesday: { breakfast: null, lunch: null, dinner: null },
+      thursday: { breakfast: null, lunch: null, dinner: null },
+      friday: { breakfast: null, lunch: null, dinner: null },
+      saturday: { breakfast: null, lunch: null, dinner: null },
+      sunday: { breakfast: null, lunch: null, dinner: null }
+    };
 
     const newMealPlan = {
       id: nextId++,
       name,
       week, // Format: "2024-01-01" (Monday of the week)
-      meals: meals || {
-        monday: { breakfast: null, lunch: null, dinner: null },
-        tuesday: { breakfast: null, lunch: null, dinner: null },
-        wednesday: { breakfast: null, lunch: null, dinner: null },
-        thursday: { breakfast: null, lunch: null, dinner: null },
-        friday: { breakfast: null, lunch: null, dinner: null },
-        saturday: { breakfast: null, lunch: null, dinner: null },
-        sunday: { breakfast: null, lunch: null, dinner: null }
-      },
+      meals: meals && Object.keys(meals).length > 0 ? meals : defaultMeals,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };

@@ -72,6 +72,47 @@ Build for production:
 npm run build
 ```
 
+## Testing
+
+Run all tests:
+
+```bash
+npm test
+```
+
+Run tests in watch mode:
+
+```bash
+npm run test:watch
+```
+
+Run tests with coverage:
+
+```bash
+npm run test:coverage
+```
+
+Run server tests only:
+
+```bash
+npm run test:server
+```
+
+Run client tests only:
+
+```bash
+npm run test:client
+```
+
+### Test Coverage
+
+The project includes comprehensive unit tests for:
+
+- **Backend API**: All endpoints with various scenarios and error handling
+- **React Components**: Component rendering, user interactions, and state management
+- **Frontend Pages**: Page navigation, data fetching, and user workflows
+- **Integration**: API mocking and end-to-end user scenarios
+
 ## API Endpoints
 
 ### Recipes
