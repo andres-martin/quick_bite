@@ -1,0 +1,179 @@
+QUICKBITE PHASE 2 PRESENTATION - SLIDE CONTENT
+
+=== SLIDE 1: TITLE ===
+QuickBite - Smart Recipe & Meal Planner
+A lightweight web application for discovering and planning meals
+
+GitHub Repository: https://github.com/andres-martin/quick_bite
+Phase 2 Deliverable | July 2025
+
+=== SLIDE 2: PURPOSE ===
+Problem Statement:
+• Meal planning is time-consuming and overwhelming
+• Users struggle to find recipes matching specific criteria
+• Existing apps are too complex or require lengthy signups
+
+Our Solution - QuickBite:
+• Smart Recipe Discovery by prep time, ingredients, diet
+• Quick filters: "5-ingredient meals", "vegan dinners under 30 min"
+• Weekly meal planning with drag-and-drop interface
+• No account required - start using immediately
+• Mobile-first responsive design
+
+=== SLIDE 3: ARCHITECTURE ===
+Three-Tier Architecture:
+
+CLIENT TIER (Port 3000):
+• React SPA with component-based UI
+• Tailwind CSS for utility-first styling
+• Lucide React for modern icons
+• React Router for navigation
+
+SERVER TIER (Port 5000):
+• Express.js RESTful API
+• Morgan logging middleware
+• Helmet security headers
+• CORS cross-origin support
+
+DATA TIER:
+• JSON file storage (recipes.json, meal-plans.json)
+• File system I/O operations
+• Easily upgradeable to database
+
+=== SLIDE 4: TECHNOLOGY STACK ===
+Frontend:
+• React 18.2 - Component-based UI framework
+• React Router DOM 6.8 - Client-side routing
+• Tailwind CSS 3.3 - Utility-first styling
+• Lucide React - Modern icon library
+• React Testing Library - Component testing
+
+Backend:
+• Node.js - JavaScript runtime
+• Express.js 4.18 - Web framework
+• Morgan - HTTP request logging
+• Helmet - Security middleware
+• CORS - Cross-origin resource sharing
+
+Development & Testing:
+• Jest - Testing framework
+• Supertest - HTTP assertions for API testing
+• Nodemon - Development auto-restart
+• Concurrently - Multiple script execution
+
+=== SLIDE 5: SCREENSHOTS - HOME PAGE ===
+[INSERT SCREENSHOT OF HOME PAGE]
+
+Key Features:
+• Clean navigation header with logo and menu
+• Hero section with clear value proposition
+• Quick action buttons: "Find Recipes" and "Plan Meals"
+• Featured recipe cards with prep time and dietary tags
+• Responsive grid layout for all screen sizes
+• Prominent search functionality
+
+=== SLIDE 6: SCREENSHOTS - RECIPE SEARCH ===
+[INSERT SCREENSHOT OF RECIPE SEARCH PAGE]
+
+Advanced Filtering:
+• Search by ingredients, recipe name, or tags
+• Time filters: 5 min, 15 min, 30+ minutes
+• Dietary restrictions: vegan, vegetarian, gluten-free
+• Difficulty levels: easy, medium, hard
+• Meal types: breakfast, lunch, dinner, snack
+• Real-time search results with instant feedback
+
+=== SLIDE 7: SCREENSHOTS - RECIPE DETAIL ===
+[INSERT SCREENSHOT OF RECIPE DETAIL PAGE]
+
+Comprehensive Information:
+• High-quality recipe image
+• Timing: prep time, cook time, total time
+• Serving size and difficulty level
+• Complete ingredients list with measurements
+• Step-by-step cooking instructions
+• Nutritional information and dietary tags
+• "Add to Meal Plan" integration
+
+=== SLIDE 8: SCREENSHOTS - MEAL PLANNER ===
+[INSERT SCREENSHOT OF MEAL PLANNER PAGE]
+
+Interactive Features:
+• Weekly calendar view (Monday-Sunday)
+• Drag-and-drop recipe assignment
+• Meal type organization (breakfast, lunch, dinner)
+• Quick recipe preview cards
+• Save and load meal plans
+• Export grocery list functionality
+
+=== SLIDE 9: API DESIGN ===
+RESTful API Endpoints:
+
+Recipe Management:
+• GET /api/recipes - All recipes with filters
+• GET /api/recipes/:id - Specific recipe details
+• GET /api/recipes/random/:count - Random recipes
+• GET /api/recipes/meta/tags - Available tags
+
+Meal Plan Management:
+• GET /api/meal-plans - All meal plans
+• POST /api/meal-plans - Create meal plan
+• PUT /api/meal-plans/:id - Update meal plan
+• DELETE /api/meal-plans/:id - Delete meal plan
+
+Query Parameters:
+search, maxTotalTime, maxPrepTime, diet, difficulty, tags, limit
+
+=== SLIDE 10: CHANGES FROM PROPOSAL ===
+Strategic Decisions:
+
+Original → Final → Reason
+MongoDB → JSON Files → Simplified deployment, no dependencies
+User Auth → No Account → Faster onboarding, less complexity
+Recipe Reviews → Curated Content → Quality over quantity
+Shopping Cart → Export List → MVP approach, scope management
+Real-time Collab → Individual Plans → Phase 2 timeline
+
+Benefits:
+• Faster development with reduced technical debt
+• Easier deployment with self-contained application
+• Better user experience with immediate access
+• Maintainable codebase with simpler architecture
+• Comprehensive testing (78 tests, 100% passing)
+
+=== SLIDE 11: TESTING & QUALITY ===
+Comprehensive Test Coverage:
+
+Backend Testing (38 tests):
+• API endpoint functionality
+• Error handling and edge cases
+• Data validation and filtering
+• CRUD operations for meal plans
+
+Frontend Testing (40 tests):
+• Component rendering
+• User interaction flows
+• Routing and navigation
+• Mock API integration
+
+Total: 78 Tests - 100% Passing
+Technologies: Jest, React Testing Library, Supertest
+
+=== PRESENTATION NOTES ===
+Screenshots needed:
+1. Home page showing hero section and featured recipes
+2. Recipe search with filters and results
+3. Recipe detail page with full information
+4. Meal planner with weekly calendar
+
+Demo preparation:
+• Have app running at localhost:3000
+• Prepare search scenarios
+• Show mobile responsiveness
+• Demonstrate API calls in browser dev tools
+
+Key talking points:
+• User-centric design decisions
+• Strategic simplifications for Phase 2
+• Comprehensive testing strategy
+• Future scalability considerations
